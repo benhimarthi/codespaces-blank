@@ -1,9 +1,0 @@
-{
-  "name": "Flutter Dev",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "postCreateCommand": "bash .devcontainer/setup.sh",
-  "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:/home/vscode/flutter/bin:/home/vscode/android-sdk/cmdline-tools/latest/bin:/home/vscode/android-sdk/platform-tools",
-    "ANDROID_HOME": "/home/vscode/android-sdk"
-  }
-}

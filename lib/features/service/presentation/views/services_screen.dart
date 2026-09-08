@@ -96,7 +96,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
           return const Center(child: Text('No services found.'));
         },
       ),
-      floatingActionButton: Container(
+      floatingActionButton: SizedBox(
         height: 150,
         //color: Colors.green,
         child: Column(

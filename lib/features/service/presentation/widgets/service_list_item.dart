@@ -89,7 +89,7 @@ class _ServiceListItemState extends State<ServiceListItem> {
                           ],
                         ),
                       ),
-                      Container(
+                      SizedBox(
                         width: 170,
                         //color: Colors.green,
                         child: Row(

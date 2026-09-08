@@ -25,7 +25,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-  ServiceCategory _selectedCategory = ServiceCategory.other;
+  final ServiceCategory _selectedCategory = ServiceCategory.other;
   Town? _selectedTown;
   String _searchQuery = '';
   final _searchController = TextEditingController();

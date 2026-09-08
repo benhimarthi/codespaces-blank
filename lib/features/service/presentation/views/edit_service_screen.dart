@@ -150,7 +150,7 @@ class _EditServiceScreenState extends State<EditServiceScreen> {
                       labelText: 'Category',
                       border: OutlineInputBorder(),
                     ),
-                    value: _selectedCategory,
+                    initialValue: _selectedCategory,
                     items: ServiceCategory.values
                         .map(
                           (category) => DropdownMenuItem(
@@ -179,7 +179,7 @@ class _EditServiceScreenState extends State<EditServiceScreen> {
                       labelText: 'Town',
                       border: OutlineInputBorder(),
                     ),
-                    value: _selectedTown,
+                    initialValue: _selectedTown,
                     items: Town.values
                         .map(
                           (town) => DropdownMenuItem(
@@ -208,7 +208,7 @@ class _EditServiceScreenState extends State<EditServiceScreen> {
                       labelText: 'Subscription',
                       border: OutlineInputBorder(),
                     ),
-                    value: _selectedSubscription,
+                    initialValue: _selectedSubscription,
                     items: SubscriptionVersion.values
                         .map(
                           (sub) => DropdownMenuItem(

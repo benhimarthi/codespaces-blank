@@ -20,6 +20,19 @@ if [ ! -d "android-sdk" ]; then
   cd ~
 fi
 
+cat >> .devcontainer/setup.sh << 'EOF'
+
+# Tailscale setup
+if ! command -v tailscale &> /dev/null; then
+  curl -fsSL https://tailscale.com/install.sh | sh
+fi
+
+sudo mkdir -p /var/run/tailscale
+sudo tailscaled --tun=userspace-networking --socket=/var/run/tailscale/tailscaled.sock > ~/tailscaled.log 2>&1 &
+sleep 3
+sudo tailscale up --socket=/var/run/tailscale/tailscaled.sock
+EOF
+
 export ANDROID_HOME="$HOME/android-sdk"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools"
 

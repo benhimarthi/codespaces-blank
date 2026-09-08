@@ -66,8 +66,8 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
   }
 
   void _showAddReviewDialog(BuildContext context) {
-    double _rating = 3;
-    final _commentController = TextEditingController();
+    double rating = 3;
+    final commentController = TextEditingController();
     final user = context.read<UserProvider>().user;
 
     if (user == null) {
@@ -88,7 +88,7 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               RatingBar.builder(
-                initialRating: _rating,
+                initialRating: rating,
                 minRating: 1,
                 direction: Axis.horizontal,
                 allowHalfRating: true,
@@ -97,12 +97,12 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
                 itemBuilder: (context, _) =>
                     const Icon(Icons.star, color: Colors.amber),
                 onRatingUpdate: (rating) {
-                  _rating = rating;
+                  rating = rating;
                 },
               ),
               const SizedBox(height: 16),
               TextField(
-                controller: _commentController,
+                controller: commentController,
                 decoration: const InputDecoration(
                   hintText: 'Enter your comment...',
                   border: OutlineInputBorder(),
@@ -122,8 +122,8 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
                   id: const Uuid().v4(),
                   serviceId: widget.service.id,
                   userId: user.id,
-                  comment: _commentController.text,
-                  rating: _rating,
+                  comment: commentController.text,
+                  rating: rating,
                   createdAt: DateTime.now(),
                 );
                 context.read<ServiceCubit>().addReview(review);

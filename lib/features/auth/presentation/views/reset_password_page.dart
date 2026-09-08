@@ -5,7 +5,7 @@ import '../bloc/auth_bloc.dart';
 
 class ResetPasswordPage extends StatefulWidget {
   static const String routeName = '/reset-password';
-  const ResetPasswordPage({Key? key}) : super(key: key);
+  const ResetPasswordPage({super.key});
 
   @override
   State<ResetPasswordPage> createState() => _ResetPasswordPageState();
@@ -13,7 +13,7 @@ class ResetPasswordPage extends StatefulWidget {
 
 class _ResetPasswordPageState extends State<ResetPasswordPage> {
   final TextEditingController _emailController = TextEditingController();
-  bool _isLoading = false;
+  final bool _isLoading = false;
 
   @override
   void dispose() {

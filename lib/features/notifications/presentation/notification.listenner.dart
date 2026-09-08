@@ -11,8 +11,7 @@ class NotificationsScreen extends StatelessWidget {
 
   final NotificationDataService notificationService;
 
-  const NotificationsScreen({Key? key, required this.notificationService})
-    : super(key: key);
+  const NotificationsScreen({super.key, required this.notificationService});
 
   @override
   Widget build(BuildContext context) {

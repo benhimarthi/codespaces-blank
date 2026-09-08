@@ -103,7 +103,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
             ),
           ),
           // Category Chips
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width * 0.9,
             height: 65,
             child: Padding(

@@ -106,7 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           labelText: 'User Type',
                           border: OutlineInputBorder(),
                         ),
-                        value: _selectedUserType,
+                        initialValue: _selectedUserType,
                         items: _userTypes.map((String userType) {
                           return DropdownMenuItem<String>(
                             value: userType,
